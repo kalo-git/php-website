@@ -1,3 +1,38 @@
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+      
+        button:hover {
+            background: #e5e8ec;
+        }
+
+
+
 .navbar {
   background-color: rgba(
     255,
@@ -23,9 +58,9 @@
 .logoing {
   width: 170px;
   height: 120px;
-  padding: 0px;
-  margin: -40px;
-  margin-left: 10px;
+  padding: 5px;
+  margin: -30px;
+  margin-left: -10px;
 }
 
 /* Navbar links */

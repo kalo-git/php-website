@@ -9,9 +9,16 @@ include('functions.php'); // Include the functions file
 // Gallery items - you can replace these with dynamic data (e.g., from a database)
 $images = [
     ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
-    ["src" => "images/image2.jpg", "alt" => "Image 2", "title" => "Title 2"],
-    ["src" => "images/image3.jpg", "alt" => "Image 3", "title" => "Title 3"],
-    ["src" => "images/image4.jpg", "alt" => "Image 4", "title" => "Title 4"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
+    ["src" => "assets/images/kenburns-bg-1.jpg", "alt" => "Image 1", "title" => "Title 1"],
     // Add more images as needed
 ];
 ?>

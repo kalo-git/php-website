@@ -23,6 +23,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Contact.php">Contact</a>
                     </li>
+                    <li class="nav-item">
+                   <a class="btn btn-info" href="book_now.php" >Book Now</a>
+                    </li>
                 </ul>
             </div>
         </div>
