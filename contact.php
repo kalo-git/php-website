@@ -1,61 +1,33 @@
 <?php
-include('functions.php'); // Include the functions file
-?>
+// Include functions file if necessary (commented out for now)
+include'functions.php';
+// include('functions.php');
+include 'includes\header.php';
+// Process the form submission
 
-<?php
-// Include common header
-include 'includes/header.php';
-?>
-
-<?php
-// Contact form handling
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Collect form data and sanitize it
-    $name = htmlspecialchars(trim($_POST['name']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $message = htmlspecialchars(trim($_POST['message']));
+    // Retrieve and sanitize form data
+    $name = htmlspecialchars($_POST['name']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
 
-    // Validate the data (simple validation)
-    if (!empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // OPTIONAL: Send the message to WhatsApp
-        // Uncomment the following lines if you have a WhatsApp API set up.
-        $whatsapp_api_url = "https://your-whatsapp-api-url"; // Replace with your WhatsApp API URL
-        $whatsapp_number = 'recipient-whatsapp-number'; // Replace with the recipient WhatsApp number (in international format)
-        $whatsapp_message = urlencode("Name: $name\nEmail: $email\n\nMessage:\n$message"); // Encode message to fit in URL format
+    // WhatsApp Message
+    $whatsapp_number = '7477835515';
 
-        $whatsapp_payload = [
-            'phone' => $whatsapp_number,
-            'text' => $whatsapp_message
-        ];
+    // Correct the WhatsApp message format
+    $whatsapp_message = "New Booking Inquiry:\nName: $name\nPhone: $phone\nemail: $email\nMessage: $message";
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $whatsapp_api_url);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($whatsapp_payload));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            'Content-Type: application/json',
-            'Authorization: Bearer YOUR_API_KEY', // Replace with your API key
-        ]);
-        $whatsapp_response = curl_exec($ch);
-        curl_close($ch);
+    // Create WhatsApp URL with properly encoded message
+    $whatsapp_url = "https://wa.me/$whatsapp_number?text=" . urlencode($whatsapp_message);
 
-        $success_message = "Thank you for contacting us, $name! We will get back to you soon.";
-    } else {
-        $error_message = "Please fill in all fields correctly.";
-    }
+    // Redirect to WhatsApp
+    header("Location: $whatsapp_url");
+    exit();
 }
+
 ?>
 
-<!-- Display success or error message -->
-<?php if (isset($success_message)): ?>
-    <div class="alert alert-success">
-        <?php echo $success_message; ?>
-    </div>
-<?php elseif (isset($error_message)): ?>
-    <div class="alert alert-danger">
-        <?php echo $error_message; ?>
-    </div>
-<?php endif; ?>
 
 <!-- Contact Form -->
 <div class="container">
@@ -70,6 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="mb-3">
                     <label for="email" class="form-label">Your Email</label>
                     <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Your Message</label>
