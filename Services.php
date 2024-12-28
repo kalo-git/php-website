@@ -4,7 +4,7 @@ include('functions.php'); // Include the functions file
 
 <?php
 // Include common header
-include 'includes\header.php';
+include 'includes/header.php';
 
 // Array of services with links to their pages
 $services = [

@@ -2,7 +2,7 @@
 include('functions.php'); // Include the functions file
 ?>
 
-<?php include 'includes\header.php';?>
+<?php include 'includes/header.php';?>
 
 
 <?php
