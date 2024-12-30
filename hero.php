@@ -1,9 +1,7 @@
 
 
     <!-- Hero Section (Carousel) -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" style="
-    margin-top: -50px;
-">
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <?php
         // Array of image paths
