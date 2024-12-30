@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="mb-3">
     <label class="form-label">Scan Barcode to Pay</label>
     <img src="assets/images/meditate.jpg" alt="Payment Barcode" class="img-fluid" style="max-width: 200px;">
-    <p class="text-muted">Please upload the payment confirmation screenshot after completing the transaction.</p>
+    <b><p class="text-muted mt-4">Please upload the payment confirmation screenshot after completing the transaction.</p></b>
 </div>
 
 <!-- end payment_method -->

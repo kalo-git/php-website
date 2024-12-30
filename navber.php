@@ -7,7 +7,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto gap-1">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
@@ -25,6 +25,9 @@
                     </li>
                     <li class="nav-item">
                    <a class="btn btn-info" href="book_now.php" >Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                   <a class="btn btn-info" href="payment.php" >Payment Now</a>
                     </li>
                 </ul>
             </div>
