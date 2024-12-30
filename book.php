@@ -107,17 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <textarea class="form-control" id="message" name="message" rows="4"></textarea>
         </div>
 
-        <!-- payment_method -->
-
-<!-- Barcode for Payment -->
-<div class="mb-3">
-    <label class="form-label">Scan Barcode to Pay</label>
-    <img src="assets/images/meditate.jpg" alt="Payment Barcode" class="img-fluid" style="max-width: 200px;">
-    <b><p class="text-muted mt-4">Please upload the payment confirmation screenshot after completing the transaction.</p></b>
-</div>
-
-<!-- end payment_method -->
-
         <div class="form-check mb-4">
             <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
             <label class="form-check-label" for="terms">

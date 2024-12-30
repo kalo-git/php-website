@@ -1,7 +1,7 @@
 <?php
 // Include functions file if necessary (commented out for now)
-include'functions.php';
-// include('functions.php');
+include 'functions.php';
+
 include 'includes/header.php';
 // Process the form submission
 
